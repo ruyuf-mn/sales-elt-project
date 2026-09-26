@@ -23,10 +23,10 @@ An end-to-end ELT (Extract, Load, Transform) data pipeline designed to ingest ra
 
 The transformation step (`transform.sql`) handles data cleaning and enrichment inside PostgreSQL through a structured pipeline:
 
-1. `null_price` (Null Handling): Replaces missing unit prices with `0` using `COALESCE`.
-2. `no_duplicates` (Deduplication): Removes duplicate transaction records using `DISTINCT ON`.
-3. `proper_date` (Data Type Conversion): Converts text-formatted dates (`MM/DD/YYYY`) into actual `DATE` types using `TO_DATE`.
-4. `Rnaked` (Business Analytics): Ranks products by revenue within each product category using `RANK() OVER (PARTITION BY ... ORDER BY ...)`.
+1. `null_price` : Replaces missing unit prices with `0` using `COALESCE`.
+2. `no_duplicates` : Removes duplicate transaction records using `DISTINCT ON`.
+3. `proper_date` : Converts text-formatted dates (`MM/DD/YYYY`) into actual `DATE` types using `TO_DATE`.
+4. `Rnaked` : Ranks products by revenue within each product category using `RANK() OVER (PARTITION BY ... ORDER BY ...)`.
 
 ---
 
